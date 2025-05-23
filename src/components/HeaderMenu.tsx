@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import type {JSX} from "react";
 import routes from "../routes.tsx";
 import { CgGym } from "react-icons/cg";
+import {NavLink} from "react-router";
 
 
 function HeaderMenu(): JSX.Element {
@@ -14,7 +15,7 @@ function HeaderMenu(): JSX.Element {
                     <Navbar.Brand href="/"><CgGym style={{fontSize: 50}}/></Navbar.Brand>
                     <Nav className="me-auto">
                         {routes.map((route) => (
-                            <Nav.Link key={route.path} href={route.path}>
+                            <Nav.Link key={route.path} as={NavLink} to={route.path}>
                                 {route.label}
                             </Nav.Link>
                         ))}
