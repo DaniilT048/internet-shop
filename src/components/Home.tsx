@@ -1,32 +1,59 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import type {ReactElement} from "react";
+import {type ReactElement, useState} from "react";
+import Container from "react-bootstrap/Container";
+import {Carousel} from "react-bootstrap";
+import shop1 from "../assets/shopCarousel.jpg";
+import shop2 from "../assets/shopSlider2.jpg";
+import shop3 from "../assets/shopSlider3.jpg";
 
 const Home = ():ReactElement => {
     document.title = "Home";
-    return(
-    <Container >
-        <Row>
-            <Col >
-                <h1 className="d-flex justify-content-center">Welcome to SportLine – Your Ultimate Sports Gear Destination</h1>
-                <p>Discover high-quality sports equipment, apparel, and accessories designed to support your active lifestyle.
-                    Whether you're hitting the gym, training outdoors, or just starting your fitness journey — we’ve got everything you need.
-                </p>
-                     <h2>Browse our collection of:</h2>
-                    <ul>
-                        <li>Dumbbells & home gym equipment</li>
-                        <li>Running & training shoes</li>
-                        <li>Sportswear for men and women</li>
-                        <li>Yoga mats, resistance bands, and more</li>
-                    </ul>
-                    Stay fit. Stay motivated. Stay equipped.
-                    Fast shipping, secure checkout, and unbeatable prices — all in one place.
+    const [index, setIndex] = useState(0);
 
-                    Start shopping now and power up your performance!
-            </Col>
-        </Row>
-    </Container>
+    const handleSelect = (selectedIndex:number) => {
+        setIndex(selectedIndex);
+    }
+    return(
+        <Container>
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={shop1}
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <h3>First slide label</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 "
+                        src={shop2}
+                        alt="Second slide"
+                    />
+                    <Carousel.Caption>
+                        <h3>Second slide label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={shop3}
+                        alt="Third slide"
+                    />
+                    <Carousel.Caption>
+                        <h3>Third slide label</h3>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+        </Container>
+
+
 );
 }
 
