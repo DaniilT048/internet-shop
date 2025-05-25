@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import ShopCard from "./ShopCard.tsx";
 import products from "../data/products.ts";
 import Form from 'react-bootstrap/Form';
+import {Outlet} from "react-router";
+
 
 const Shop = ():ReactElement => {
     document.title = "Shop";
@@ -26,6 +28,7 @@ const Shop = ():ReactElement => {
                     </Col>
                 ))}
             </Row>
+            <Outlet />
         </Container>
     )
 

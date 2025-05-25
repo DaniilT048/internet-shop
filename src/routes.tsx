@@ -3,15 +3,18 @@ import Home from "./components/Home.tsx";
 import About from "./components/About.tsx";
 import Shop from "./components/Shop.tsx";
 import Cart from "./components/Cart.tsx";
+import ItemShop from "./components/ItemShop.tsx";
 
 
 interface RoutesType {
-    path: string;
+    path?: string;
     element: JSX.Element;
-    label: string;
+    label?: string;
+    children?: RoutesType[];
 }
 
-const routes: RoutesType[] = [
+let routes: RoutesType[];
+routes = [
     {
         path: "/",
         element: <Home/>,
@@ -26,6 +29,11 @@ const routes: RoutesType[] = [
         path: "/shop",
         element: <Shop/>,
         label: "Shop",
+        children:
+            [{
+            path: ":id",
+            element: <ItemShop/>,
+        }],
     },
     {
         path: "/cart",
