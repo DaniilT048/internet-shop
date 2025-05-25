@@ -9,7 +9,7 @@ import {NavLink} from "react-router";
 
 function HeaderMenu(): JSX.Element {
     return (
-        <>
+        <div className="mb-4">
             <Navbar bg="primary" data-bs-theme="dark">
                 <Container>
                     <Navbar.Brand href="/"><CgGym style={{fontSize: 50}}/></Navbar.Brand>
@@ -22,7 +22,7 @@ function HeaderMenu(): JSX.Element {
                     </Nav>
                 </Container>
             </Navbar>
-        </>
+        </div>
     );
 }
 
