@@ -15,8 +15,8 @@ function ShopCard({ product }: ProductProps): JSX.Element {
             <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>${product.price.toFixed(2)}</Card.Text>
-                <Link to={`/shop/${product.id}`}>
-                   <Button variant="info"  className="mb-4">View more info</Button>
+                <Link to={`/products/${product.id}`}>
+                   <Button variant="info" className="m-1" >More info</Button>
                 </Link>
                 <Button variant="primary">Add to Cart</Button>
             </Card.Body>

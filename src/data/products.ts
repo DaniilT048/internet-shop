@@ -1,11 +1,5 @@
-export type Product = {
-    id: number;
-    name: string;
-    image: string;
-    price: number;
-    description: string;
-    category: 'Balls' | 'Dumbbells' | 'Mats' | 'Accessories';
-};
+import type {Product} from "../types/Product.ts";
+import {Category} from "../types/Category.ts";
 
 const products: Product[] = [
     {
@@ -14,7 +8,7 @@ const products: Product[] = [
         image: "/images/balls/football.jpg",
         price: 25,
         description: "Durable synthetic leather football for training and matches.",
-        category: "Balls"
+        category: Category.BALLS
     },
     {
         id: 2,
@@ -22,7 +16,7 @@ const products: Product[] = [
         image: "/images/balls/basketball.jpg",
         price: 30,
         description: "High-grip rubber basketball for indoor and outdoor use.",
-        category: "Balls"
+        category: Category.BALLS
     },
     {
         id: 3,
@@ -30,7 +24,7 @@ const products: Product[] = [
         image: "/images/balls/volleyball.jpg",
         price: 28,
         description: "Soft-touch volleyball perfect for beach or court games.",
-        category: "Balls"
+        category: Category.BALLS
     },
     {
         id: 4,
@@ -38,7 +32,7 @@ const products: Product[] = [
         image: "/images/balls/tennis-balls.jpg",
         price: 15,
         description: "Pack of 6 professional-grade tennis balls.",
-        category: "Balls"
+        category: Category.BALLS
     },
     {
         id: 5,
@@ -46,7 +40,7 @@ const products: Product[] = [
         image: "/images/balls/medicine-ball.jpg",
         price: 35,
         description: "Perfect for strength training and rehab exercises.",
-        category: "Balls"
+        category: Category.BALLS
     },
 
     {
@@ -55,7 +49,7 @@ const products: Product[] = [
         image: "/images/dumbbells/adjustable.jpg",
         price: 120,
         description: "Easily adjustable weight for versatile training at home.",
-        category: "Dumbbells"
+        category: Category.DUMBBELLS
     },
     {
         id: 7,
@@ -63,7 +57,7 @@ const products: Product[] = [
         image: "/images/dumbbells/neoprene.jpg",
         price: 20,
         description: "Soft-grip dumbbells ideal for light training.",
-        category: "Dumbbells"
+        category: Category.DUMBBELLS
     },
     {
         id: 8,
@@ -71,7 +65,7 @@ const products: Product[] = [
         image: "/images/dumbbells/chrome.jpg",
         price: 60,
         description: "Durable chrome-plated dumbbells with grip handle.",
-        category: "Dumbbells"
+        category: Category.DUMBBELLS
     },
     {
         id: 9,
@@ -79,7 +73,7 @@ const products: Product[] = [
         image: "/images/dumbbells/vinyl.jpg",
         price: 40,
         description: "Vinyl coated for extra comfort and protection.",
-        category: "Dumbbells"
+        category: Category.DUMBBELLS
     },
     {
         id: 10,
@@ -87,7 +81,7 @@ const products: Product[] = [
         image: "/images/dumbbells/hex.jpg",
         price: 50,
         description: "Anti-roll hexagonal shape, great for any workout.",
-        category: "Dumbbells"
+        category: Category.DUMBBELLS
     },
 
 
@@ -97,7 +91,7 @@ const products: Product[] = [
         image: "/images/mats/yoga.jpg",
         price: 25,
         description: "Non-slip surface for yoga and stretching routines.",
-        category: "Mats"
+        category: Category.MATS
     },
     {
         id: 12,
@@ -105,7 +99,7 @@ const products: Product[] = [
         image: "/images/mats/thick.jpg",
         price: 35,
         description: "High-density foam mat for comfort and support.",
-        category: "Mats"
+        category: Category.MATS
     },
     {
         id: 13,
@@ -113,7 +107,7 @@ const products: Product[] = [
         image: "/images/mats/folding.jpg",
         price: 55,
         description: "Perfect for martial arts, gymnastics, and stretching.",
-        category: "Mats"
+        category: Category.MATS
     },
     {
         id: 14,
@@ -121,7 +115,7 @@ const products: Product[] = [
         image: "/images/mats/puzzle.jpg",
         price: 45,
         description: "Interlocking mat tiles for floor protection.",
-        category: "Mats"
+        category: Category.MATS
     },
     {
         id: 15,
@@ -129,7 +123,7 @@ const products: Product[] = [
         image: "/images/mats/cork.jpg",
         price: 40,
         description: "Eco-friendly cork mat for better grip and balance.",
-        category: "Mats"
+        category: Category.MATS
     },
 
     {
@@ -138,7 +132,7 @@ const products: Product[] = [
         image: "/images/accessories/bands.jpg",
         price: 30,
         description: "Includes multiple resistance levels for any workout.",
-        category: "Accessories"
+        category: Category.ACCESSORIES
     },
     {
         id: 17,
@@ -146,7 +140,7 @@ const products: Product[] = [
         image: "/images/accessories/rope.jpg",
         price: 12,
         description: "Adjustable speed rope for cardio and endurance.",
-        category: "Accessories"
+        category: Category.ACCESSORIES
     },
     {
         id: 18,
@@ -154,7 +148,7 @@ const products: Product[] = [
         image: "/images/accessories/gloves.jpg",
         price: 18,
         description: "Padded palm gloves for a secure gym grip.",
-        category: "Accessories"
+        category: Category.ACCESSORIES
     },
     {
         id: 19,
@@ -162,7 +156,7 @@ const products: Product[] = [
         image: "/images/accessories/bottle.jpg",
         price: 10,
         description: "Leak-proof BPA-free bottle for your hydration needs.",
-        category: "Accessories"
+        category: Category.ACCESSORIES
     },
     {
         id: 20,
@@ -170,7 +164,7 @@ const products: Product[] = [
         image: "/images/accessories/towel.jpg",
         price: 8,
         description: "Lightweight and absorbent microfiber gym towel.",
-        category: "Accessories"
+        category: Category.ACCESSORIES
     },
 ];
 

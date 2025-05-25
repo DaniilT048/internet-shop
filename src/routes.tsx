@@ -1,13 +1,14 @@
 import type {JSX} from "react";
 import Home from "./components/Home.tsx";
 import About from "./components/About.tsx";
-import Shop from "./components/Shop.tsx";
+import Products from "./components/Products.tsx";
 import Cart from "./components/Cart.tsx";
-import ItemShop from "./components/ItemShop.tsx";
+import Item from "./components/Item.tsx";
 
 
-interface RoutesType {
-    path?: string;
+
+export interface RoutesType {
+    path: string;
     element: JSX.Element;
     label?: string;
     children?: RoutesType[];
@@ -26,14 +27,13 @@ routes = [
         label: "About",
     },
     {
-        path: "/shop",
-        element: <Shop/>,
-        label: "Shop",
-        children:
-            [{
-            path: ":id",
-            element: <ItemShop/>,
-        }],
+        path: "/products",
+        element: <Products/>,
+        label: "Products",
+    },
+    {
+        path: "/products/:id",
+        element: <Item/>,
     },
     {
         path: "/cart",
