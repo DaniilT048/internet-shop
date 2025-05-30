@@ -6,7 +6,6 @@ import routes from "../routes.tsx";
 import { CgGym } from "react-icons/cg";
 import {NavLink} from "react-router";
 
-
 function HeaderMenu(): JSX.Element {
     return (
         <div className="mb-4">
@@ -14,14 +13,13 @@ function HeaderMenu(): JSX.Element {
                 <Container>
                     <Navbar.Brand href="/"><CgGym style={{fontSize: 50}}/></Navbar.Brand>
                     <Nav className="me-auto">
-                    {
-                        routes.map(route =>
-                            route.label &&  <Nav.Link key={route.path} as={NavLink} to={route.path}>
-                                                    {route.label}
-                                                </Nav.Link>
-
-                        )
-                    }
+                        {
+                            routes.map(route =>
+                                    route.label && <Nav.Link key={route.path} as={NavLink} to={route.path}>
+                                        {route.label}
+                                    </Nav.Link>
+                            )
+                        }
                     </Nav>
                 </Container>
             </Navbar>
