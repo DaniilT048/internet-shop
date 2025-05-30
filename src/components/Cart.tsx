@@ -28,6 +28,7 @@ const Cart = () => {
                         const product = getProduct(id);
                         return (
                             <div key={id}>
+                                <img src={product.image} alt={product.description} height="250"/>
                                 <h4>{product.name}</h4>
                                 <p>Quantity: {quantity}</p>
                                 <p>Price: ${product.price}</p>

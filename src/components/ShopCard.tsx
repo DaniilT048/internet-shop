@@ -16,13 +16,14 @@ function ShopCard({ product }: ProductProps): JSX.Element {
     const [modalShow, setModalShow] = useState(false);
     return (
         <Card >
+            <Link to={`/products/${product.id}`}>
             <Card.Img variant="top" src={product.image} alt={product.name} />
+            </Link>
             <Card.Body>
-                <Card.Title>{product.name}</Card.Title>
-                <Card.Text>${product.price.toFixed(2)}</Card.Text>
                 <Link to={`/products/${product.id}`}>
-                   <Button variant="info" className="m-1" >More info</Button>
+                <Card.Title>{product.name}</Card.Title>
                 </Link>
+                <Card.Text>${product.price.toFixed(2)}</Card.Text>
                 <Button variant="primary" onClick={() => dispatch(addToCart(product.id)) && setModalShow(true)}>Add to Cart</Button>
                 <ModalCart
                     show={modalShow}

@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import products from '../data/products';
 import type { Product } from '../data/products';
+import Container from "react-bootstrap/Container";
 
 const Item = () => {
     const { id } = useParams<{ id: string }>();
@@ -20,13 +21,12 @@ const Item = () => {
     if (!product) return <h2>Product not found</h2>;
 
     return (
-
-        <div>
+        <Container>
             <h1>{product.name}</h1>
             <img src={product.image} alt={product.description} />
             <p>{product.description}</p>
             <p>{product.price}</p>
-        </div>
+        </Container>
     );
 };
 
