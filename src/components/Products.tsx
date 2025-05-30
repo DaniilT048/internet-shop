@@ -9,7 +9,7 @@ import {Category} from "../types/Category.ts";
 
 
 const Products = ():ReactElement => {
-    document.title = "Products";
+    document.title = "Shop";
     const [category, setCategory] = useState<Category>(Category.ALL);
 
     const handleCategoryChange= (event: ChangeEvent<HTMLSelectElement>)=> {

@@ -29,7 +29,7 @@ routes = [
     {
         path: "/products",
         element: <Products/>,
-        label: "Products",
+        label: "Shop",
     },
     {
         path: "/products/:id",
