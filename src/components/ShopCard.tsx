@@ -3,12 +3,15 @@ import Card from 'react-bootstrap/Card';
 import  { type Product } from '../data/products';
 import type {JSX} from "react";
 import {Link} from "react-router-dom";
+import {addToCart} from "../store/cartSlice.ts";
+import {useDispatch} from "react-redux";
 
 export type ProductProps = {
     product: Product;
 };
 
 function ShopCard({ product }: ProductProps): JSX.Element {
+    const dispatch = useDispatch();
     return (
         <Card >
             <Card.Img variant="top" src={product.image} alt={product.name} />
@@ -18,7 +21,7 @@ function ShopCard({ product }: ProductProps): JSX.Element {
                 <Link to={`/products/${product.id}`}>
                    <Button variant="info" className="m-1" >More info</Button>
                 </Link>
-                <Button variant="primary">Add to Cart</Button>
+                <Button variant="primary" onClick={() => dispatch(addToCart(product.id))}>Add to Cart</Button>
             </Card.Body>
         </Card>
     );
