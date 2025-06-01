@@ -21,11 +21,17 @@ const Item = () => {
     if (!product) return <h2>Product not found</h2>;
 
     return (
-        <Container>
-            <h1>{product.name}</h1>
-            <img src={product.image} alt={product.description} />
-            <p>{product.description}</p>
-            <p>{product.price}</p>
+        <Container className="text-center">
+            <div className="card bg-info">
+                <div>
+                    <img src={product.image} className="card-img-top" alt={product.description}  style={{width: '300px', }}/>
+                </div>
+                <div className="card-body">
+                    <h5 className="card-title">{product.name}</h5>
+                    <p className="card-text">About product: {product.description}</p>
+                    <p className="card-text text-body-secondary">${product.price}</p>
+                </div>
+            </div>
         </Container>
     );
 };

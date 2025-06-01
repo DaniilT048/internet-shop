@@ -5,18 +5,17 @@ import {incrementQty, decrementQty, removeFromCart, clearCart} from "../store/ca
 import Button from "react-bootstrap/Button";
 import {Container} from "react-bootstrap";
 
+
+
 const Cart = () => {
     const dispatch = useDispatch();
     const cartItems = useSelector((state: RootState) => state.cart.items);
 
     const getProduct = (id: number) => products.find(p => p.id === id)!;
-
     const total = cartItems.reduce((sum, item) => {
         const product = getProduct(item.id);
         return sum + item.quantity * product.price;
     }, 0);
-
-
     return (
         <Container>
             <h2 className="text-center">Cart</h2>
