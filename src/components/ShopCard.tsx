@@ -19,11 +19,11 @@ function ShopCard({ product }: ProductProps): JSX.Element {
             <Link to={`/products/${product.id}`}>
             <Card.Img variant="top" src={product.image} alt={product.name} />
             </Link>
-            <Card.Body>
+            <Card.Body className="text-center">
                 <Link to={`/products/${product.id}`}>
                 <Card.Title>{product.name}</Card.Title>
                 </Link>
-                <Card.Text>${product.price.toFixed(2)}</Card.Text>
+                <Card.Text >${product.price.toFixed(2)}</Card.Text>
                 <Button variant="primary" onClick={() => dispatch(addToCart(product.id)) && setModalShow(true)}>Add to Cart</Button>
                 <ModalCart
                     show={modalShow}

@@ -4,6 +4,8 @@ import products from "../data/products";
 import {incrementQty, decrementQty, removeFromCart, clearCart} from "../store/cartSlice";
 import Button from "react-bootstrap/Button";
 import {Container} from "react-bootstrap";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 
 
@@ -18,6 +20,7 @@ const Cart = () => {
     }, 0);
     return (
         <Container>
+            <Row>
             <h2 className="text-center">Cart</h2>
             {cartItems.length === 0 ? (
                 <p>Your cart is empty</p>
@@ -26,7 +29,7 @@ const Cart = () => {
                     {cartItems.map(({id, quantity}) => {
                         const product = getProduct(id);
                         return (
-                            <div key={id}>
+                            <Col key={id} className="m-3">
                                 <img src={product.image} alt={product.description} height="250"/>
                                 <h4>{product.name}</h4>
                                 <p>Quantity: {quantity}</p>
@@ -35,7 +38,7 @@ const Cart = () => {
                                 <Button variant="danger" onClick={() => dispatch(decrementQty(id))}>-</Button>
                                 <Button variant="success" onClick={() => dispatch(incrementQty(id))}>+</Button>
                                 <Button variant="warning" onClick={() => dispatch(removeFromCart(id))}>Remove</Button>
-                            </div>
+                            </Col>
                         );
                     })}
                     <hr/>
@@ -44,6 +47,7 @@ const Cart = () => {
                     <Button variant="danger" onClick={() => dispatch(clearCart())}>Clear Cart</Button>
                 </>
             )}
+            </Row>
         </Container>
     );
 };
