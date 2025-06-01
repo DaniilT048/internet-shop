@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import products from '../data/products';
-import type { Product } from '../data/products';
+import type { Product } from '../types/Product';
 import Container from "react-bootstrap/Container";
 
 const Item = () => {

@@ -1,7 +1,7 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ShopCard from "./ShopCard";
-import type { Product } from "../data/products";
+import type { Product } from '../types/Product';
 import type {ReactElement} from "react";
 
 type ItemListProps = {

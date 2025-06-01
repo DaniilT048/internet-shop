@@ -10,8 +10,8 @@ import {useSelector} from "react-redux";
 
 
 function HeaderMenu(): JSX.Element {
-    const cartItems = useSelector((state) => state.cart.items);
-    const totalQuantity = cartItems.reduce((sum: number, item: number) => sum + item.quantity, 0);
+    const cartItems = useSelector((state: any) => state.cart.items);
+    const totalQuantity = cartItems.reduce((sum: number, item: any) => sum + item.quantity, 0);
     return (
         <div className="mb-4">
             <Navbar bg="primary" data-bs-theme="dark">

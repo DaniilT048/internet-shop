@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import  { type Product } from '../data/products';
+import type { Product } from '../types/Product';
 import {type JSX, useState} from "react";
 import {Link} from "react-router-dom";
 import {addToCart} from "../store/cartSlice.ts";
