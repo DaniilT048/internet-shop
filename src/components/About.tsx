@@ -1,5 +1,4 @@
 import Container from "react-bootstrap/Container";
-import {Link} from "react-router-dom";
 import type {ReactElement} from "react";
 
 const About = ():ReactElement => {
@@ -10,15 +9,37 @@ const About = ():ReactElement => {
                 About Page
             </h1>
             <p>
-                Whether you're building a home gym, training for a competition, or just starting your fitness journey — we've got you covered.
-                From dumbbells and resistance bands to professional gym machines, our wide range of products meets the needs of athletes, beginners, and fitness enthusiasts alike.
+                Whether you're building a home gym, training for a competition, or just starting your fitness journey —
+                we've got you covered.
+                From dumbbells and resistance bands to professional gym machines, our wide range of products meets the
+                needs of athletes, beginners, and fitness enthusiasts alike.
             </p>
-            <ul>
-                <li>We are have <Link to="/products?category=Balls" className="link-primary">Balls</Link></li>
-                <li>We are have <Link to="/products?category=Dumbbells" className="link-primary">Dumbbells</Link></li>
-                <li>We are have <Link to="/products?category=Mats" className="link-primary">Mats</Link></li>
-                <li>We are have <Link to="/products?category=Accessories" className="link-primary">Accessories</Link></li>
-            </ul>
+            <div className="list-group">
+                <a href="/products?category=Balls" className="list-group-item list-group-item-action flex-column align-items-start">
+                    <div className="d-flex w-100 justify-content-between">
+                        <h5 className="mb-1">Balls</h5>
+                    </div>
+                    <p className="mb-1">We have a lot of balls</p>
+                </a>
+                <a href="/products?category=Dumbbells" className="list-group-item list-group-item-action flex-column align-items-start">
+                    <div className="d-flex w-100 justify-content-between">
+                        <h5 className="mb-1">Dumbbells</h5>
+                    </div>
+                    <p className="mb-1">We have a lot of dumbbells</p>
+                </a>
+                <a href="/products?category=Mats" className="list-group-item list-group-item-action flex-column align-items-start">
+                    <div className="d-flex w-100 justify-content-between">
+                        <h5 className="mb-1">Mats</h5>
+                    </div>
+                    <p className="mb-1">We have a lot of mats</p>
+                </a>
+                <a href="/products?category=Accessories" className="list-group-item list-group-item-action flex-column align-items-start">
+                    <div className="d-flex w-100 justify-content-between">
+                        <h5 className="mb-1">Accessories</h5>
+                    </div>
+                    <p className="mb-1">We have a lot of accessories</p>
+                </a>
+            </div>
         </Container>
     )
 
