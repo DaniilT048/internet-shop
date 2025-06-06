@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import type {JSX} from "react";
 import routes from "../routes.tsx";
 import { CgGym } from "react-icons/cg";
-import {NavLink} from "react-router";
+import {Link, NavLink} from "react-router";
 import {BsCart4} from "react-icons/bs";
 import {useSelector} from "react-redux";
 
@@ -16,7 +16,7 @@ function HeaderMenu(): JSX.Element {
         <div className="mb-4">
             <Navbar bg="primary" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="/"><CgGym style={{fontSize: 50}}/></Navbar.Brand>
+                    <Link to={'/'}><Navbar.Brand><CgGym style={{fontSize: 50}}/></Navbar.Brand></Link>
                     <Nav className="me-auto">
                         {
                             routes.filter(route => route.label && route.path !== "/cart")
