@@ -24,7 +24,7 @@ const Item = () => {
         <Container className="text-center">
             <div className="card bg-info">
                 <div>
-                    <img src={product.image} className="card-img-top" alt={product.description}  style={{width: '300px', }}/>
+                    <img src={`.${product.image}`} className="card-img-top" alt={product.description}  style={{width: '300px', }}/>
                 </div>
                 <div className="card-body">
                     <h5 className="card-title">{product.name}</h5>

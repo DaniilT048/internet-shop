@@ -19,7 +19,9 @@ const router = createBrowserRouter ([
       }
     ]
   }
-]);
+],{
+  basename: "/internet-shop",
+});
 
 const App = () =>{
 
