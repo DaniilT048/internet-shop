@@ -41,3 +41,18 @@ div a{
   text-decoration: none;
   color: black;
 }
+
+.text {
+  letter-spacing: 0.15em;
+  overflow: hidden;
+  animation: typing 4s steps(30, end) ;
+  white-space: nowrap;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}

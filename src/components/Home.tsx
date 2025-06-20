@@ -14,14 +14,15 @@ const Home = ():ReactElement => {
     }
     return(
         <Container>
-            <h1 className="text-center">Welcome to Gym Store!</h1>
+            <h1 className="text-center text">Welcome to Gym Store!</h1>
+
             <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100 object-fit-cover"
                         src={shop1}
                         alt="First slide"
-                        style={{ height: '400px', objectFit: 'cover' }}
+                        style={{ height: '1000px', objectFit: 'cover' }}
                     />
                     <Carousel.Caption >
                     </Carousel.Caption>
@@ -32,7 +33,7 @@ const Home = ():ReactElement => {
                         className="d-block w-100 object-fit-cover"
                         src={shop2}
                         alt="Second slide"
-                        style={{ height: '400px', objectFit: 'cover' }}
+                        style={{ height: '1000px', objectFit: 'cover' }}
                     />
                     <Carousel.Caption>
                     </Carousel.Caption>
@@ -42,7 +43,7 @@ const Home = ():ReactElement => {
                         className="d-block w-100 object-fit-cover"
                         src={shop3}
                         alt="Third slide"
-                        style={{ height: '400px', objectFit: 'cover' }}
+                        style={{ height: '1000px', objectFit: 'cover' }}
                     />
                     <Carousel.Caption>
                     </Carousel.Caption>
