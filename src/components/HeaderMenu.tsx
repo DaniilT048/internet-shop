@@ -22,11 +22,13 @@ function HeaderMenu(): JSX.Element {
                         id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel"
                         placement="end"
+                        style={{opacity: 0.7}}
+                        className="bg-primary"
                     >
-                        <Offcanvas.Header closeButton className="bg-primary">
+                        <Offcanvas.Header closeButton>
                             <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
                         </Offcanvas.Header>
-                        <Offcanvas.Body className="bg-primary">
+                        <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
                                 {
                                     routes.filter(route => route.label && route.path !== "/cart")

@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import {Container} from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import { Link } from "react-router";
 
 
 
@@ -30,8 +31,10 @@ const Cart = () => {
                         const product = getProduct(id);
                         return (
                             <Col key={id} className="m-3">
+                                <Link to={`/products/${product.id}`}>
                                 <img src={product.image} alt={product.description} height="250"/>
                                 <h4>{product.name}</h4>
+                                </Link>
                                 <p>Quantity: {quantity}</p>
                                 <p>Price: ${product.price}</p>
                                 <p>Subtotal: ${(quantity * product.price).toFixed(2)}</p>

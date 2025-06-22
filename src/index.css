@@ -43,7 +43,6 @@ div a{
 }
 
 .text {
-  letter-spacing: 0.15em;
   overflow: hidden;
   animation: typing 4s steps(30, end) ;
   white-space: nowrap;

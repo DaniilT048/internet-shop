@@ -24,7 +24,7 @@ function ShopCard({ product }: ProductProps): JSX.Element {
                 <Card.Title>{product.name}</Card.Title>
                 </Link>
                 <Card.Text >${product.price.toFixed(2)}</Card.Text>
-                <Button variant="primary" onClick={() => dispatch(addToCart(product.id)) && setModalShow(true)}>Add to Cart</Button>
+                <Button variant="success" onClick={() => dispatch(addToCart(product.id)) && setModalShow(true)}>Add to Cart</Button>
                 <ModalCart
                     show={modalShow}
                     onHide={() => setModalShow(false)}
