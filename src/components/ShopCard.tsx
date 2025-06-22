@@ -15,7 +15,7 @@ function ShopCard({ product }: ProductProps): JSX.Element {
     const dispatch = useDispatch();
     const [modalShow, setModalShow] = useState(false);
     return (
-        <Card >
+        <Card className="shopCard">
             <Link to={`/products/${product.id}`}>
             <Card.Img variant="top" src={product.image} alt={product.name} />
             </Link>

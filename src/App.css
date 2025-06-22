@@ -29,3 +29,31 @@ body{
 .active{
   color: #fff;
 }
+div a{
+  text-decoration: none;
+  color: black;
+}
+
+.text {
+  overflow: hidden;
+  animation: typing 4s steps(30, end) ;
+  white-space: nowrap;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+.shopCard{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.shopCard:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
