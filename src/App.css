@@ -25,10 +25,16 @@ body{
 .read-the-docs {
   color: #888;
 }
-
-.active{
+div a.nav-link{
+  color:#FFFFFF8C;
+}
+a.nav-link.active{
   color: #fff;
 }
+.nav-link:hover{
+  color: #fff;
+}
+
 div a{
   text-decoration: none;
   color: black;
@@ -56,4 +62,23 @@ div a{
 .shopCard:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-img {
+  height: 250px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (min-width: 768px) {
+  .carousel-img {
+    height: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-img {
+    height: 500px;
+  }
 }

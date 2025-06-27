@@ -19,10 +19,10 @@ const Home = ():ReactElement => {
             <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 object-fit-cover"
+                        className="d-block w-100 carousel-img"
                         src={shop1}
                         alt="First slide"
-                        style={{ height: '1000px', objectFit: 'cover' }}
+
                     />
                     <Carousel.Caption >
                     </Carousel.Caption>
@@ -30,20 +30,18 @@ const Home = ():ReactElement => {
 
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 object-fit-cover"
+                        className="d-block w-100 carousel-img"
                         src={shop2}
                         alt="Second slide"
-                        style={{ height: '1000px', objectFit: 'cover' }}
                     />
                     <Carousel.Caption>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 object-fit-cover"
+                        className="d-block w-100 carousel-img"
                         src={shop3}
                         alt="Third slide"
-                        style={{ height: '1000px', objectFit: 'cover' }}
                     />
                     <Carousel.Caption>
                     </Carousel.Caption>

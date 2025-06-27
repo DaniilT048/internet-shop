@@ -22,7 +22,7 @@ function HeaderMenu(): JSX.Element {
                         id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel"
                         placement="end"
-                        style={{opacity: 0.7}}
+                        style={{opacity: 0.8}}
                         className="bg-primary"
                     >
                         <Offcanvas.Header closeButton>
