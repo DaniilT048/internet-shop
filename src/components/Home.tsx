@@ -22,12 +22,10 @@ const Home = ():ReactElement => {
                         className="d-block w-100 carousel-img"
                         src={shop1}
                         alt="First slide"
-
                     />
-                    <Carousel.Caption >
+                    <Carousel.Caption>
                     </Carousel.Caption>
                 </Carousel.Item>
-
                 <Carousel.Item>
                     <img
                         className="d-block w-100 carousel-img"

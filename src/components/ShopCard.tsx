@@ -21,7 +21,11 @@ function ShopCard({ product }: ProductProps): JSX.Element {
             </Link>
             <Card.Body className="text-center">
                 <Link to={`/products/${product.id}`}>
-                <Card.Title>{product.name}</Card.Title>
+                <Card.Title style={{whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'}}>
+                    {product.name}
+                </Card.Title>
                 </Link>
                 <Card.Text >${product.price.toFixed(2)}</Card.Text>
                 <Button variant="success" onClick={() => dispatch(addToCart(product.id)) && setModalShow(true)}>Add to Cart</Button>
