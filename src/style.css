@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
+    --accent: #ff6b6b;
     --bg-light: #f9f9f9;
     --bg-dark: #121212;
     --text-light: #f1f1f1;
@@ -18,13 +19,13 @@ body {
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: var(--text-light);
     margin: 0;
-    padding: 0;
+    padding-top: 72px;
 }
 
 h1 {
     font-size: clamp(2rem, 4vw, 3.5rem);
     line-height: 1.2;
-    color: var(--text-light);
+    color: var(--accent);
     margin-bottom: 1rem;
 }
 
@@ -34,12 +35,14 @@ button {
     padding: 0.7em 1.4em;
     font-size: 1em;
     font-weight: 600;
+    background-color: var(--accent);
     color: #fff;
     cursor: pointer;
     transition: all var(--transition);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 button:hover {
+    background-color: #ff8787;
     transform: scale(1.05);
 }
 button:focus {
@@ -114,6 +117,11 @@ a {
         height: 500px;
     }
 }
+@media (min-width: 768px) {
+    body {
+        padding-top: 56px;
+    }
+}
 
 .text {
     overflow: hidden;
@@ -157,4 +165,24 @@ a {
 
 .read-the-docs {
     color: #888;
+}
+
+.nav-link-custom {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+.nav-link-custom:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.nav-link-custom.active {
+    color: #ff6b6b !important;
+}
+
+.navbar {
+    transition: all 0.3s ease;
 }
