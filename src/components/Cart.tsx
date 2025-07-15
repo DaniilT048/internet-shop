@@ -38,9 +38,9 @@ const Cart = () => {
                                 <p>Quantity: {quantity}</p>
                                 <p>Price: ${product.price}</p>
                                 <p>Subtotal: ${(quantity * product.price).toFixed(2)}</p>
-                                <Button variant="danger" onClick={() => dispatch(decrementQty(id))}>-</Button>
-                                <Button variant="success" onClick={() => dispatch(incrementQty(id))}>+</Button>
-                                <Button variant="warning" onClick={() => dispatch(removeFromCart(id))}>Remove</Button>
+                                <Button className="m-3" variant="danger" onClick={() => dispatch(decrementQty(id))}>-</Button>
+                                <Button className="m-3" variant="success" onClick={() => dispatch(incrementQty(id))}>+</Button>
+                                <Button className="m-3" variant="warning" onClick={() => dispatch(removeFromCart(id))}>Remove</Button>
                             </Col>
                         );
                     })}
